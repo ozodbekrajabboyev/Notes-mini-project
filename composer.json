@@ -6,12 +6,21 @@
             "email": "ozodbek2625@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/collections": "^10.48"
+    },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
             "Http\\": "Http/"
         }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.35"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
-
 }
