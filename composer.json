@@ -1,0 +1,17 @@
+{
+    "name": "sher/www",
+    "authors": [
+        {
+            "name": "Ozodbek",
+            "email": "ozodbek2625@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+
+}
