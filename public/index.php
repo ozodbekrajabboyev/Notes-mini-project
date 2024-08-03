@@ -1,5 +1,6 @@
 <?php
 
+use Core\Session;
 
 session_start();
 
@@ -22,5 +23,7 @@ $routes = require base_path('routes.php');
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 $method = isset($_POST['_method']) ?$_POST['_method']: $_SERVER['REQUEST_METHOD'];
 
-// dd($method);
+
 $router->route($uri, $method);
+
+Session::unflash();

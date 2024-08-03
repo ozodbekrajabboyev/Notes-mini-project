@@ -1,6 +1,7 @@
 <?php
 
 use Core\App;
+use Core\Authenticator;
 use Core\Database;
 use Core\Validator;
 
@@ -48,7 +49,7 @@ if ($user) {
     ]);
 
     
-    login($user);
+    (new Authenticator)->login($user);
 
     // redirect 
     header('location: /');
