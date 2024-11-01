@@ -5,7 +5,11 @@ use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$currentUserId = 1;
+$currentUserId = $db->query('select id from users where email=:email', [
+    'email' => $_SESSION['user']['email'] ?? 'NULL',
+])->find();
+
+$currentUserId = $currentUserId['id'];
 
 $note = $db->query('select * from notes where id = :id', [
     'id' => $_GET['id']

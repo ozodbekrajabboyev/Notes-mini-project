@@ -8,7 +8,7 @@ use Core\Validator;
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-
+// dd($email);
 //validate the form inputs
 $errors = [];
 
@@ -51,6 +51,7 @@ if ($user) {
     
     (new Authenticator)->login($user);
 
+    // dd($_SESSION['user']);
     // redirect 
     header('location: /');
     exit();
